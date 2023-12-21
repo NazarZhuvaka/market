@@ -1,0 +1,157 @@
+.auth-form{
+    margin-top: 149px;
+    margin-left: 98px;
+    margin-bottom: 162px;
+
+    @media screen and (max-width: 1000px) {
+        margin: 0;
+    }
+
+    @media screen and (max-width: 1000px) {
+        margin-bottom: 50px;
+    }
+
+    &__title{
+        color:var(--Secondary-Color);
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        text-transform: capitalize;
+        margin-bottom: 8px;
+
+        @media screen and (max-width: 425px) {
+           font-size: 32px;
+        }
+    }
+
+    &__desc{
+        color: var( --Accent-2);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 56px;
+
+        @media screen and (max-width: 425px) {
+            font-size: 14px;
+         }
+    }
+
+    &__type{
+        color: var(--Secondary-Color);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    &__remember{
+        color: var(--Secondary-Color);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    &__forget{
+        color: var(--Primary-Color);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px; 
+
+        &:hover{
+            color: rgb(215, 241, 50);
+        }
+    }
+
+
+    .input-container{
+        position: relative;
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+
+    &__input{
+        border-radius: 8px;
+        border: 1px solid #D0D5DD;
+        display: flex;
+        padding: 10px 14px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        &__icon{
+            position: absolute;
+            right: 13px;
+            top: 10px;
+            cursor: pointer;
+        }
+    }
+
+    &__checking{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 32px;
+
+        &__check-container{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+
+    &__sign{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: var(--Secondary-Color);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+
+        &__link{
+            color: var(--Primary-Color);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+
+            position: relative;
+
+            &:hover{
+                color: rgb(215, 241, 50);
+            }
+        }
+    }
+
+    &__checkbox{
+        display: none;
+        
+        &-custom{
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+            border: 1px solid var(--Accent-1, #D0D5DD);
+            position: relative;
+        }
+
+        &-custom::before{
+            content: "";
+            background-image: url(../assets/check.svg);
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background-repeat: no-repeat;
+
+            transform: translate(0%, 3%) scale(0);
+            transition: 0.2s ease-in;
+
+            left: 10%;
+            top: 5%;
+        }
+
+
+    }
+
+    &__checkbox:checked + &__checkbox-custom::before{
+        transform: translate(0%, 3%) scale(1);
+    }
+}

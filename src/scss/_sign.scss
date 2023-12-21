@@ -1,0 +1,30 @@
+
+.auth{
+    max-width: 1920px;
+    margin-inline:auto ;
+
+    &-img{
+
+        @media screen and (max-width: 1000px) {
+            display: none;
+        }
+
+        // @include desktop-small {
+        //     padding-bottom: 55px;
+        // }
+    }
+}
+
+.container{
+    max-width: calc(1330px + 30px);
+    margin-inline:auto ;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 30px;
+
+    @media screen and (max-width: 1000px) {
+        justify-content: center;
+    }
+}
